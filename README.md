@@ -1,2 +1,2 @@
 # dsa-c-
-dsa first course
+my first dsa
