@@ -1,4 +1,1 @@
-Teacher()
-    {
-        cout << "hello constructor";
-    }
+rajendra
