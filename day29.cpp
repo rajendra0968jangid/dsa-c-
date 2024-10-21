@@ -20,14 +20,25 @@ int main()
         {
             high = mid;
             mid = mid / 2;
-            cout << arr[low] << " one " << arr[high - 1] << endl;
         }
         if (arr[mid] < f)
         {
             low = mid;
             mid = (mid + high) / 2;
-            cout << arr[low] << " two " << arr[high - 1] << endl;
         }
+        if (low == mid)
+        {
+            mid = -1;
+            break;
+        }
+    }
+    if (mid == -1)
+    {
+        cout << "not found";
+    }
+    else
+    {
+        cout << "at index:" << mid;
     }
     return 0;
 }
