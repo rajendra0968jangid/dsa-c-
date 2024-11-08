@@ -1,4 +1,9 @@
+#include <iostream>
+using namespace std;
+
+// Function to merge two subarrays
 void merge(int arr[], int left, int mid, int right) {
+    cout<<left<<"-"<<mid<<"-"<<right<<endl;
     int n1 = mid - left + 1;  // size of left subarray
     int n2 = right - mid;     // size of right subarray
 
@@ -40,4 +45,40 @@ void merge(int arr[], int left, int mid, int right) {
         j++;
         k++;
     }
+}
+
+// Function to perform Merge Sort
+void mergeSort(int arr[], int left, int right) {
+    if (left < right) {
+        int mid = (right+left) / 2;
+
+        // Recursively sort the first and second halves
+        mergeSort(arr, left, mid);
+        mergeSort(arr, mid + 1, right);
+
+        // Merge the sorted halves
+        merge(arr, left, mid, right);
+    }
+}
+
+// Function to print the array
+void printArray(int arr[], int size) {
+    for (int i = 0; i < size; i++) {
+        cout << arr[i] << " ";
+    }
+    cout << endl;
+}
+
+int main() {
+    int arr[] = {12, 11, 13, 5, 6, 7};
+    int arr_size = sizeof(arr) / sizeof(arr[0]);
+
+    // cout << "Given array is \n";
+    // printArray(arr, arr_size);
+
+    mergeSort(arr, 0, arr_size - 1);
+
+    // cout << "\nSorted array is \n";
+    // printArray(arr, arr_size);
+    return 0;
 }
