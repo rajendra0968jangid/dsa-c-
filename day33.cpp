@@ -23,6 +23,10 @@ public:
     {
         cout << name << " " << *cptr << endl;
     }
+    ~Student()
+    {
+        delete cptr;
+    }
 };
 int main()
 {
@@ -31,4 +35,5 @@ int main()
     s1.getInfo();
     *(s2.cptr) = 9.2;
     s1.getInfo();
+    return 0;
 }
