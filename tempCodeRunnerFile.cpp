@@ -1,1 +1,1 @@
-double
+typename
