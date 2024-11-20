@@ -64,21 +64,21 @@
 
 ////////////////////////////////////////////////////////////////
 // // template
-// #include <iostream>
-// using namespace std;
+#include <iostream>
+using namespace std;
 
-// template <typename T>
-// T add(T a, T b)
-// {
-//     return a + b;
-// }
+template <typename T>
+T add(T a, T b)
+{
+    return a + b;
+}
 
-// int main()
-// {
-//     cout << "Addition of integers: " << add(3, 7) << endl;    // int
-//     cout << "Addition of doubles: " << add(3.5, 2.1) << endl; // double
-//     return 0;
-// }
+int main()
+{
+    cout << "Addition of integers: " << add(3, 7) << endl;    // int
+    cout << "Addition of doubles: " << add(3.5, 2.1) << endl; // double
+    return 0;
+}
 ////////////////////////////////////////////////////////////////////
 // // exceptions handling
 // #include <iostream>
@@ -109,7 +109,7 @@
 // ifstream	  Reads from files
 
 ////////////////////////////
-// // ofstream
+// ofstream
 // #include <iostream>
 // #include <fstream>
 // using namespace std;
@@ -132,30 +132,44 @@
 // #include <string>
 // using namespace std;
 
-// int main () {
-//   // Create a text file
-//   ofstream MyWriteFile("filename.txt");
+// int main()
+// {
+//     // Create a text file
+//     ofstream MyWriteFile("filename.txt");
 
-//   // Write to the file
-//   MyWriteFile << "Files can be tricky, but it is fun enough!";
+//     // Write to the file
+//     MyWriteFile << "Files can be tricky, but it is fun enough!";
 
-//   // Close the file
-//   MyWriteFile.close();
+//     // Close the file
+//     MyWriteFile.close();
 
-//   // Create a text string, which is used to output the text file
-//   string myText;
+//     // Create a text string, which is used to output the text file
+//     string myText;
 
-//   // Read from the text file
-//   ifstream MyReadFile("filename.txt");
+//     // Read from the text file
+//     ifstream MyReadFile("filename.txt");
 
-//   // Use a while loop together with the getline() function to read the file line by line
-//   while (getline (MyReadFile, myText)) {
-//     // Output the text from the file
+//     getline(MyReadFile, myText);
+//     cout << myText << endl;
+//     getline(MyReadFile, myText);
 //     cout << myText;
-//   }
 
-//   // Close the file
-//   MyReadFile.close();
+//     // Close the file
+//     MyReadFile.close();
 // }
+///////////////////////////////////////////////////
+////goto
+// #include <iostream>
+// using namespace std;
 
+// int main()
+// {
 
+//     cout << "raj" << endl;
+//     goto asdf;
+//     cout << "hello" << endl;
+
+// asdf:
+//     cout << "123" << endl;
+//     return 0;
+// }
